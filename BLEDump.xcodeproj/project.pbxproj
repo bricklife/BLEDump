@@ -1,0 +1,308 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CBF81EE31F2A006000304993 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF81EE21F2A006000304993 /* AppDelegate.swift */; };
+		CBF81EE51F2A006000304993 /* PeripheralScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF81EE41F2A006000304993 /* PeripheralScanViewController.swift */; };
+		CBF81EE71F2A006000304993 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBF81EE61F2A006000304993 /* Assets.xcassets */; };
+		CBF81EEA1F2A006000304993 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBF81EE81F2A006000304993 /* Main.storyboard */; };
+		CBF81EF21F2A00B200304993 /* BLEManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF81EF11F2A00B200304993 /* BLEManager.swift */; };
+		CBF81EF41F2A217100304993 /* GATTDumpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF81EF31F2A217100304993 /* GATTDumpViewController.swift */; };
+		CBF81EF61F2A219500304993 /* GATTDumper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF81EF51F2A219500304993 /* GATTDumper.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CBF81EDF1F2A006000304993 /* BLEDump.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BLEDump.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBF81EE21F2A006000304993 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CBF81EE41F2A006000304993 /* PeripheralScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeripheralScanViewController.swift; sourceTree = "<group>"; };
+		CBF81EE61F2A006000304993 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CBF81EE91F2A006000304993 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CBF81EEB1F2A006000304993 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBF81EF11F2A00B200304993 /* BLEManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEManager.swift; sourceTree = "<group>"; };
+		CBF81EF31F2A217100304993 /* GATTDumpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GATTDumpViewController.swift; sourceTree = "<group>"; };
+		CBF81EF51F2A219500304993 /* GATTDumper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GATTDumper.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CBF81EDC1F2A006000304993 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CBF81ED61F2A006000304993 = {
+			isa = PBXGroup;
+			children = (
+				CBF81EE11F2A006000304993 /* BLEDump */,
+				CBF81EE01F2A006000304993 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CBF81EE01F2A006000304993 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CBF81EDF1F2A006000304993 /* BLEDump.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CBF81EE11F2A006000304993 /* BLEDump */ = {
+			isa = PBXGroup;
+			children = (
+				CBF81EE21F2A006000304993 /* AppDelegate.swift */,
+				CBF81EE41F2A006000304993 /* PeripheralScanViewController.swift */,
+				CBF81EF31F2A217100304993 /* GATTDumpViewController.swift */,
+				CBF81EF11F2A00B200304993 /* BLEManager.swift */,
+				CBF81EF51F2A219500304993 /* GATTDumper.swift */,
+				CBF81EE61F2A006000304993 /* Assets.xcassets */,
+				CBF81EE81F2A006000304993 /* Main.storyboard */,
+				CBF81EEB1F2A006000304993 /* Info.plist */,
+			);
+			path = BLEDump;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CBF81EDE1F2A006000304993 /* BLEDump */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBF81EEE1F2A006000304993 /* Build configuration list for PBXNativeTarget "BLEDump" */;
+			buildPhases = (
+				CBF81EDB1F2A006000304993 /* Sources */,
+				CBF81EDC1F2A006000304993 /* Frameworks */,
+				CBF81EDD1F2A006000304993 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BLEDump;
+			productName = BLEDump;
+			productReference = CBF81EDF1F2A006000304993 /* BLEDump.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CBF81ED71F2A006000304993 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = bricklife.com;
+				TargetAttributes = {
+					CBF81EDE1F2A006000304993 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = CBF81EDA1F2A006000304993 /* Build configuration list for PBXProject "BLEDump" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CBF81ED61F2A006000304993;
+			productRefGroup = CBF81EE01F2A006000304993 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CBF81EDE1F2A006000304993 /* BLEDump */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CBF81EDD1F2A006000304993 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBF81EE71F2A006000304993 /* Assets.xcassets in Resources */,
+				CBF81EEA1F2A006000304993 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CBF81EDB1F2A006000304993 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBF81EF41F2A217100304993 /* GATTDumpViewController.swift in Sources */,
+				CBF81EF61F2A219500304993 /* GATTDumper.swift in Sources */,
+				CBF81EE51F2A006000304993 /* PeripheralScanViewController.swift in Sources */,
+				CBF81EF21F2A00B200304993 /* BLEManager.swift in Sources */,
+				CBF81EE31F2A006000304993 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CBF81EE81F2A006000304993 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CBF81EE91F2A006000304993 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CBF81EEC1F2A006000304993 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CBF81EED1F2A006000304993 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		CBF81EEF1F2A006000304993 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = BLEDump/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bricklife.mac.BLEDump;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		CBF81EF01F2A006000304993 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = BLEDump/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bricklife.mac.BLEDump;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CBF81EDA1F2A006000304993 /* Build configuration list for PBXProject "BLEDump" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBF81EEC1F2A006000304993 /* Debug */,
+				CBF81EED1F2A006000304993 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CBF81EEE1F2A006000304993 /* Build configuration list for PBXNativeTarget "BLEDump" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBF81EEF1F2A006000304993 /* Debug */,
+				CBF81EF01F2A006000304993 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CBF81ED71F2A006000304993 /* Project object */;
+}
