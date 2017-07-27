@@ -55,7 +55,8 @@ class GATTDumper: NSObject {
         let len = nsdata.length
         var byteArray = [UInt8](repeating: 0x0, count: len)
         nsdata.getBytes(&byteArray, length:len)
-        return byteArray.map { String(format: "0x%02x", $0) }.joined(separator: ", ")
+        let byte = byteArray.map { String(format: "%02x", $0) }.joined(separator: " ")
+        return "[\(byte)]"
     }
 }
 
