@@ -15,6 +15,8 @@ class GATTDumper: NSObject {
     
     var update: ((String) -> Void)?
     
+    var notifyLog: [(Date, CBUUID, String)] = []
+    
     init(peripheral: CBPeripheral) {
         self.peripheral = peripheral
         super.init()
@@ -33,6 +35,10 @@ class GATTDumper: NSObject {
             service.characteristics?.forEach { characteristic in
                 text += "\t\(characteristic.uuid.uuidString) \(characteristic.properties.strings) \(hexDump(data:characteristic.value)) \(stringFor(descriptors: characteristic.descriptors))\n"
             }
+        }
+        text += "\nNotification Log:\n"
+        notifyLog.forEach { (date, uuid, string) in
+            text += "\(msec(date: date)) - \(uuid.uuidString) \(string)\n"
         }
         update?(text)
     }
@@ -53,6 +59,10 @@ class GATTDumper: NSObject {
         guard let data = data else { return "-" }
         return (data as NSData).description
     }
+    
+    fileprivate func msec(date: Date) -> String {
+        return String(format: "%.5lf", date.timeIntervalSince1970)
+    }
 }
 
 extension GATTDumper: CBPeripheralDelegate {
@@ -72,6 +82,9 @@ extension GATTDumper: CBPeripheralDelegate {
             if characteristic.properties.contains(.read) {
                 peripheral.readValue(for: characteristic)
             }
+            if characteristic.properties.contains(.notify) {
+                peripheral.setNotifyValue(true, for: characteristic)
+            }
         }
     }
     
@@ -90,10 +103,18 @@ extension GATTDumper: CBPeripheralDelegate {
     }
     
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
+        if characteristic.isNotifying {
+            notifyLog.append((Date(), characteristic.uuid, "Notify: \(hexDump(data: characteristic.value))"))
+        }
         dump()
     }
     
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor descriptor: CBDescriptor, error: Error?) {
+        dump()
+    }
+    
+    func peripheral(_ peripheral: CBPeripheral, didUpdateNotificationStateFor characteristic: CBCharacteristic, error: Error?) {
+        notifyLog.append((Date(), characteristic.uuid, "isNotifying: \(characteristic.isNotifying)"))
         dump()
     }
 }

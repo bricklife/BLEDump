@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12121"/>
@@ -712,7 +712,7 @@
                                                     </textFieldCell>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                 </tableColumn>
-                                                <tableColumn identifier="Data" width="321" minWidth="40" maxWidth="1000" id="Llp-dI-Auq">
+                                                <tableColumn identifier="Data" width="321.5" minWidth="40" maxWidth="1000" id="Llp-dI-Auq">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Advertisement Data">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -784,17 +784,17 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eO0-76-VLf">
-                                <rect key="frame" x="0.0" y="0.0" width="615" height="402"/>
+                                <rect key="frame" x="0.0" y="0.0" width="615" height="361"/>
                                 <clipView key="contentView" id="J1A-ER-8l8">
-                                    <rect key="frame" x="1" y="1" width="613" height="400"/>
+                                    <rect key="frame" x="1" y="1" width="613" height="359"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textView importsGraphics="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="vEK-S8-Ih2">
-                                            <rect key="frame" x="0.0" y="0.0" width="613" height="400"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="613" height="359"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <size key="minSize" width="613" height="400"/>
-                                            <size key="maxSize" width="613" height="10000000"/>
+                                            <size key="minSize" width="613" height="359"/>
+                                            <size key="maxSize" width="615" height="10000000"/>
                                             <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                         </textView>
                                     </subviews>
@@ -805,16 +805,28 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="9rZ-r1-WfZ">
-                                    <rect key="frame" x="598" y="1" width="16" height="400"/>
+                                    <rect key="frame" x="598" y="1" width="16" height="359"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Elf-hx-UFK">
+                                <rect key="frame" x="14" y="364" width="69" height="32"/>
+                                <buttonCell key="cell" type="push" title="Stop" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Te9-iO-Dca">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="stopButtonPushed:" target="o59-ng-m3M" id="1xH-nY-mkI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="Elf-hx-UFK" firstAttribute="leading" secondItem="yLw-hH-4qj" secondAttribute="leading" constant="20" id="3Bu-8w-qOZ"/>
+                            <constraint firstItem="eO0-76-VLf" firstAttribute="top" secondItem="Elf-hx-UFK" secondAttribute="bottom" constant="10" id="KgJ-1r-08s"/>
                             <constraint firstItem="eO0-76-VLf" firstAttribute="leading" secondItem="yLw-hH-4qj" secondAttribute="leading" id="WXK-nd-EWs"/>
+                            <constraint firstItem="Elf-hx-UFK" firstAttribute="top" secondItem="yLw-hH-4qj" secondAttribute="top" constant="10" id="erH-8w-Db1"/>
                             <constraint firstAttribute="trailing" secondItem="eO0-76-VLf" secondAttribute="trailing" id="qDr-Ui-yDT"/>
                             <constraint firstAttribute="bottom" secondItem="eO0-76-VLf" secondAttribute="bottom" id="rL6-Xf-OVV"/>
-                            <constraint firstItem="eO0-76-VLf" firstAttribute="top" secondItem="yLw-hH-4qj" secondAttribute="top" id="zLN-Bg-v47"/>
                         </constraints>
                     </view>
                     <connections>

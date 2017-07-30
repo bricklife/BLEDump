@@ -56,4 +56,10 @@ class GATTDumpViewController: NSViewController {
         
         textView.string = output
     }
+    
+    @IBAction func stopButtonPushed(_ sender: Any) {
+        guard let discoveredPeripheral = discoveredPeripheral else { return }
+        
+        manager.disconnect(discoveredPeripheral: discoveredPeripheral)
+    }
 }
