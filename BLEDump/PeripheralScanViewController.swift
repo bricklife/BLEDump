@@ -78,7 +78,7 @@ extension PeripheralScanViewController: NSTableViewDataSource {
         let peripheral = discoveredPeripheral.peripheral
         let advertisementData = discoveredPeripheral.advertisementData
         
-        switch tableColumn?.identifier {
+        switch tableColumn?.identifier.rawValue {
         case "Name"?:
             return peripheral.name ?? "Unnamed"
         case "Data"?:

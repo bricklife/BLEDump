@@ -134,6 +134,6 @@ extension CBCharacteristicProperties {
             (.notifyEncryptionRequired, "notifyEncryptionRequired"),
             (.indicateEncryptionRequired, "indicateEncryptionRequired"),
             ]
-            .flatMap { self.contains($0) ? $1 : nil }
+            .compactMap { self.contains($0) ? $1 : nil }
     }
 }
